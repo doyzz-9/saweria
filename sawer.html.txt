@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SAWER NGAB - 0858815997213</title>
+<title>SAWER NGAB - 085881599723</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;700&display=swap');
 body{margin:0;background:#0a0a0a;color:white;font-family:'Space Grotesk',sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;}
@@ -22,8 +22,8 @@ h1 span{color:#ff0055;}
 <body>
 <div class="card">
   <h1>SAWER<br><span>NGAB!</span></h1>
-  <p>DANA: <b style="color:white">0858815997213</b><br>Kalo gak sawer dalam...</p>
-  <div class="timer" id="timer">10</div>
+  <p>DANA: <b style="color:white">085881599723</b><br>Kalo gak sawer dalam...</p>
+  <div class="timer" id="timer">20</div>
   <button class="btn btn-donate" onclick="donate()">💸 SAWER SEKARANG</button>
   <button class="btn btn-skip" onclick="trigger()">Gak mau, pelit aja</button>
 </div>
@@ -33,10 +33,10 @@ h1 span{color:#ff0055;}
   <button class="btn btn-donate" style="width:auto" onclick="donate()">OK GUA SAWER!</button>
 </div>
 <script>
-let time=10;
+let time=20;
 let interval=setInterval(()=>{time--;document.getElementById('timer').textContent=time;if(time<=3)document.getElementById('timer').classList.add('red');if(time<=0){clearInterval(interval);trigger();}},1000);
 function trigger(){document.getElementById('jumpscare').classList.add('active');let u=new SpeechSynthesisUtterance("PELIT AMAT LO SAWER WOY");u.lang='id-ID';speechSynthesis.speak(u);navigator.vibrate&&navigator.vibrate([200,100,500]);}
-function donate(){window.open('https://wa.me/62858815997213?text=Bang%20udah%20gua%20sawer','_blank');}
+function donate(){window.open('https://wa.me/6285881599723?text=Bang%20udah%20gua%20sawer','_blank');}
 </script>
 </body>
 </html>
