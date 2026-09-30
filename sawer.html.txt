@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAWER NGAB - 0858815997213</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;700&display=swap');
+body{margin:0;background:#0a0a0a;color:white;font-family:'Space Grotesk',sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;}
+.card{background:#111;border:2px solid #222;border-radius:24px;padding:32px;width:90%;max-width:380px;text-align:center;}
+h1{font-family:'Bebas Neue';font-size:48px;margin:16px 0;}
+h1 span{color:#ff0055;}
+.timer{font-size:64px;font-weight:700;margin:20px 0;}
+.timer.red{color:#ff0055;}
+.btn{width:100%;padding:18px;border:none;border-radius:14px;font-weight:700;font-size:18px;cursor:pointer;margin-top:12px;}
+.btn-donate{background:#ff0055;color:white;}
+.btn-skip{background:#1a1a1a;color:#666;}
+.jumpscare{position:fixed;inset:0;background:black;display:none;align-items:center;justify-content:center;z-index:9999;flex-direction:column;}
+.jumpscare.active{display:flex;}
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>SAWER<br><span>NGAB!</span></h1>
+  <p>DANA: <b style="color:white">0858815997213</b><br>Kalo gak sawer dalam...</p>
+  <div class="timer" id="timer">10</div>
+  <button class="btn btn-donate" onclick="donate()">💸 SAWER SEKARANG</button>
+  <button class="btn btn-skip" onclick="trigger()">Gak mau, pelit aja</button>
+</div>
+<div class="jumpscare" id="jumpscare">
+  <h1 style="font-size:80px">PELIT AMAT LO!!!</h1>
+  <p>DANA LU MASIH BANYAK: 0858815997213</p>
+  <button class="btn btn-donate" style="width:auto" onclick="donate()">OK GUA SAWER!</button>
+</div>
+<script>
+let time=10;
+let interval=setInterval(()=>{time--;document.getElementById('timer').textContent=time;if(time<=3)document.getElementById('timer').classList.add('red');if(time<=0){clearInterval(interval);trigger();}},1000);
+function trigger(){document.getElementById('jumpscare').classList.add('active');let u=new SpeechSynthesisUtterance("PELIT AMAT LO SAWER WOY");u.lang='id-ID';speechSynthesis.speak(u);navigator.vibrate&&navigator.vibrate([200,100,500]);}
+function donate(){window.open('https://wa.me/62858815997213?text=Bang%20udah%20gua%20sawer','_blank');}
+</script>
+</body>
+</html>
